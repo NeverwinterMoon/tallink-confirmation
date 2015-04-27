@@ -1,0 +1,12 @@
+{
+  "name": "tallink-confirmation",
+  "version": "0.1.0",
+  "authors": [
+    "NeverwinterMoon <pavel.sorokin@tallink.ee>"
+  ],
+  "description": "Directive for HTML Confirmation service.",
+  "main": [
+    "tallinkConfirmation.js",
+    "tallinkConfirmation.directive.js"
+  ]
+}

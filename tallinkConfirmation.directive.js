@@ -45,6 +45,7 @@ angular.module('tallink-confirmation')
           forEach.call(bodyEls, function(el) {
             el.querySelector('div').setAttribute('ng-show', '!!!showConfirmation' + counter);
             el.querySelector('div').setAttribute('animation', 'slide-up-down');
+            el.querySelector('div').style.overflowY = 'hidden';
             counter++;
           });
         }

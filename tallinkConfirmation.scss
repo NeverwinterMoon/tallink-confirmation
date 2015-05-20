@@ -1,0 +1,31 @@
+[confirmationBody] {
+  overflow-y: hidden;
+}
+
+[animation='slide-up-down'].ng-hide-remove {
+  animation: slideDown 300ms both;
+}
+
+[animation='slide-up-down'].ng-hide {
+  animation: slideUp 300ms both;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}

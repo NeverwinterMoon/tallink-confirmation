@@ -2,6 +2,10 @@
   overflow-y: hidden;
 }
 
+.col-md-12 {
+  float: none !important;
+}
+
 [animation='slide-up-down'].ng-hide-remove {
   animation: slideDown 300ms both;
 }

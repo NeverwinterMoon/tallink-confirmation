@@ -5,8 +5,7 @@ angular.module('tallink-confirmation')
     return {
       restrict:      'E'
       , scope:       {
-        content:      '='
-        , stylesheet: '@'
+        content: '='
       }
       , templateUrl: 'tallinkConfirmation.html'
       , link:        linkFunction

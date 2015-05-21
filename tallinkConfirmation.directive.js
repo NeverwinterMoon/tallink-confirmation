@@ -31,7 +31,7 @@ angular.module('tallink-confirmation')
             ;
 
           forEach.call(headerEls, function(el) {
-            el.setAttribute('ng-click', 'showConfirmation' + counter + '=!showConfirmation' + counter);
+            el.setAttribute('ng-click', 'unfoldOneAndCloseAllOthers("showConfirmation", ' + counter + ', ' + headerEls.length + ')');
             counter++;
           });
         }
@@ -42,13 +42,24 @@ angular.module('tallink-confirmation')
             ;
 
           forEach.call(bodyEls, function(el) {
-            el.querySelector('div').setAttribute('ng-show', '!!!showConfirmation' + counter);
+            el.querySelector('div').setAttribute('ng-init', 'showConfirmation' + counter + '=' + (counter === 0));
+            el.querySelector('div').setAttribute('ng-show', 'showConfirmation' + counter);
             el.querySelector('div').setAttribute('animation', 'slide-up-down');
             el.querySelector('div').style.overflowY = 'hidden';
             counter++;
           });
         }
       });
+
+      $scope.unfoldOneAndCloseAllOthers = function(elementToUnfoldName, elementToUnfoldIndex, allElementsCount) {
+        for (var i = 0; i < allElementsCount; i++) {
+          if (i === elementToUnfoldIndex) {
+            $scope[elementToUnfoldName + i] = !$scope[elementToUnfoldName + i];
+            continue;
+          }
+          $scope[elementToUnfoldName + i] = false;
+        }
+      }
     }
   })
 ;

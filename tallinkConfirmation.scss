@@ -14,7 +14,6 @@ content {
     font-family: 'StagSansBook', sans-serif;
     font-size: 14px;
     line-height: 1.2;
-    background: #00122D url('http://wwtll200d.fleet.zone:28145/images/bg.png') no-repeat;
     background-size: 100% auto;
     color: #333;
     overflow-x: hidden;
@@ -112,7 +111,7 @@ content {
   .white-opacity-block .arrow-accordion {
     position: absolute;
     display: block;
-    top: 0px;
+    top: 0;
     right: 0;
   }
 
@@ -471,26 +470,6 @@ content {
     .col-lg-1 {
       width: 8.33333333%;
     }
-  }
-
-  .clearfix:before,
-  .clearfix:after,
-  .container:before,
-  .container:after,
-  .row:before,
-  .row:after {
-    content: " ";
-    display: table;
-  }
-
-  .clearfix:after,
-  .container:after,
-  .row:after {
-    clear: both;
-  }
-
-  @-ms-viewport {
-    width: device-width;
   }
 
   /*Responsive*/

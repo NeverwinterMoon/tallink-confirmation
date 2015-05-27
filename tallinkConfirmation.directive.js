@@ -42,12 +42,27 @@ angular.module('tallink-confirmation')
             ;
 
           forEach.call(bodyEls, function(el) {
-            el.querySelector('div').setAttribute('ng-init', 'showConfirmation' + counter + '=' + (counter === 0));
-            el.querySelector('div').setAttribute('ng-show', 'showConfirmation' + counter);
-            el.querySelector('div').setAttribute('animation', 'slide-up-down');
-            el.querySelector('div').style.overflowY = 'hidden';
+            var hidableBlock = el.querySelector('div');
+
+            if (counter === 0) {
+              appendInfoMessageTo(hidableBlock);
+              appendMissingPassengersSectionTo(el);
+            }
+
+            hidableBlock.setAttribute('ng-init', 'showConfirmation' + counter + '=' + (counter === 0));
+            hidableBlock.setAttribute('ng-show', 'showConfirmation' + counter);
+            hidableBlock.setAttribute('animation', 'slide-up-down');
+            hidableBlock.style.overflowY = 'hidden';
             counter++;
           });
+
+          function appendInfoMessageTo(el) {
+            el.appendChild(angular.element('<div information></div>')[0]);
+          }
+
+          function appendMissingPassengersSectionTo(el) {
+            el.appendChild(angular.element('<div missing-passengers></div>')[0]);
+          }
         }
       });
 

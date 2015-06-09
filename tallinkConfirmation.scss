@@ -12,7 +12,7 @@ content {
     width: 100%;
     height: auto;
     font-family: 'StagSansBook', sans-serif;
-    font-size: 14px;
+    font-size: rem(14);
     line-height: 1.2;
     background-size: 100% auto;
     color: #333;
@@ -35,12 +35,12 @@ content {
   .body-padding-bottom {
     position: relative;
     display: block;
-    padding: 0 0 25px 0;
+    padding: 0 0 rem(25) 0;
   }
 
   hr.divider {
     border-top: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: rem(1) solid #eee;
     margin: 0;
   }
 
@@ -58,7 +58,7 @@ content {
 
   .top-bar {
     position: relative;
-    padding: 15px 0 15px 0;
+    padding: rem(15) 0 rem(15) 0;
     font-family: 'StagSansLight', sans-serif;
   }
 
@@ -66,7 +66,7 @@ content {
     position: relative;
     display: block;
     color: #fff;
-    font-size: 18px;
+    font-size: rem(18);
     text-align: center;
   }
 
@@ -82,12 +82,12 @@ content {
     position: relative;
     display: block;
     padding: 0 rem(16) rem(16) rem(16);
-    border-radius: 0.142857142857143rem;
+    border-radius: rem(1);
     background: #fff;
     opacity: 0.97;
-    box-shadow: 0 0 0.071428571428571rem #efefef;
+    box-shadow: 0 0 rem(1) #efefef;
     cursor: pointer;
-    margin: 145px 0 0 0;
+    margin: rem(145) 0 0 0;
   }
 
   .white-opacity-block .heading {
@@ -99,7 +99,7 @@ content {
     position: relative;
     display: block;
     color: #0098c3;
-    font-size: 20px;
+    font-size: rem(20);
     font-family: 'StagSansLight', sans-serif;
     text-transform: uppercase;
   }
@@ -116,35 +116,35 @@ content {
   }
 
   .white-opacity-block .arrow-accordion img {
-    height: 20px;
+    height: rem(20);
   }
 
   .white-opacity-block .arrow-accordion.active {
     position: absolute;
     display: block;
-    top: 2px;
+    top: rem(2);
     right: 0;
   }
 
   .white-opacity-block .arrow-accordion.active img {
-    height: 12px;
+    height: rem(12);
   }
 
   .white-opacity-block .trip-information-box {
     position: relative;
     display: block;
-    margin: 20px 0 0 0;
+    margin: rem(20) 0 0 0;
   }
 
   .white-opacity-block .trip-information-box .pull-right {
-    padding: 0 0 10px 10px;
+    padding: 0 0 rem(10) rem(10);
   }
 
   .white-opacity-block .trip-information-box .arrow-trip-information-box {
     position: absolute;
     display: block;
-    right: 10px;
-    top: 20px;
+    right: rem(10);
+    top: rem(20);
   }
 
   .white-opacity-block .trip-information-box .small-text,
@@ -167,14 +167,14 @@ content {
     position: relative;
     display: block;
     font-family: 'StagSansBook', sans-serif;
-    font-size: 20px;
+    font-size: rem(20);
   }
 
   .white-opacity-block .trip-information-box .text-medium {
     position: relative;
     display: block;
     font-family: 'StagSansBook', sans-serif;
-    font-size: 16px;
+    font-size: rem(16);
     margin: 0;
   }
 
@@ -189,29 +189,29 @@ content {
   .white-opacity-block .wave-divider {
     position: relative;
     display: block;
-    margin: 15px 0 20px 0;
+    margin: rem(15) 0 rem(20) 0;
     visibility: hidden;
   }
 
   .white-opacity-block .wave-divider img {
-    height: 11px;
+    height: rem(11);
   }
 
   .white-opacity-block .information-about-trip,
   .white-opacity-block .payment-section {
     position: relative;
     display: block;
-    border: 1px solid #979797;
-    margin: 25px 0 20px 0;
-    padding: 1.142857142857143rem;
-    border-radius: 0.142857142857143rem;
+    border: rem(1) solid #979797;
+    margin: rem(25) 0 rem(20) 0;
+    padding: rem(16);
+    border-radius: rem(2);
     background: #fff;
     opacity: 0.97;
-    box-shadow: 0 0 0.071428571428571rem #efefef;
+    box-shadow: 0 0 rem(1) #efefef;
   }
 
   .white-opacity-block .payment-section .trip-information-box {
-    margin-top: 10px;
+    margin-top: rem(10);
     padding-bottom: 0;
   }
 
@@ -224,38 +224,38 @@ content {
   .container {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: rem(10);
+    padding-right: rem(10);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: rem(768)) {
     .container {
-      width: 750px;
+      width: rem(750);
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: rem(992)) {
     .container {
-      width: 970px;
+      width: rem(970);
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: rem(1200)) {
     .container {
-      width: 1170px;
+      width: rem(1170);
     }
   }
 
   .row {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: rem(-15);
+    margin-right: rem(-15);
   }
 
   .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     position: relative;
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
+    min-height: rem(1);
+    padding-left: rem(10);
+    padding-right: rem(10);
   }
 
   .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
@@ -310,7 +310,7 @@ content {
     width: 8.33333333%;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: rem(768)) {
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
       float: left;
     }
@@ -364,7 +364,7 @@ content {
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: rem(992)) {
     .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
       float: left;
     }
@@ -418,7 +418,7 @@ content {
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: rem(1200)) {
     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
       float: left;
     }

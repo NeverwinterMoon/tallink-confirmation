@@ -13,7 +13,7 @@ content {
     height: auto;
     font-family: 'StagSansBook', sans-serif;
     font-size: rem(14);
-    line-height: 1.2;
+    line-height: 1;
     background-size: 100% auto;
     color: #333;
     overflow-x: hidden;
@@ -81,8 +81,8 @@ content {
   .white-opacity-block {
     position: relative;
     display: block;
-    padding: 0 rem(16) rem(16) rem(16);
-    border-radius: rem(1);
+    padding: 0 rem(16) 0 rem(16);
+    border-radius: rem(2);
     background: #fff;
     opacity: 0.97;
     box-shadow: 0 0 rem(1) #efefef;
@@ -99,7 +99,7 @@ content {
     position: relative;
     display: block;
     color: #0098c3;
-    font-size: rem(20);
+    font-size: rem(18);
     font-family: 'StagSansLight', sans-serif;
     text-transform: uppercase;
   }
@@ -133,7 +133,6 @@ content {
   .white-opacity-block .trip-information-box {
     position: relative;
     display: block;
-    margin: rem(20) 0 0 0;
   }
 
   .white-opacity-block .trip-information-box .pull-right {
@@ -152,22 +151,19 @@ content {
     position: relative;
     display: block;
     font-family: 'StagSansLight', sans-serif;
-    font-size: rem(16);
-    padding-top: rem(10);
+    font-size: rem(14);
   }
 
   .white-opacity-block .trip-information-box .small-text.ssb,
   .white-opacity-block .trip-information-box .small-title.ssb {
     font-family: 'StagSansBook', sans-serif;
-    padding: 0;
+    font-size: rem(16);
   }
 
-  .white-opacity-block .trip-information-box .text,
-  .white-opacity-block .trip-information-box .title {
+  .title, .text {
     position: relative;
     display: block;
     font-family: 'StagSansBook', sans-serif;
-    font-size: rem(20);
   }
 
   .white-opacity-block .trip-information-box .text-medium {
@@ -202,21 +198,114 @@ content {
     position: relative;
     display: block;
     border: rem(1) solid #979797;
-    margin: rem(25) 0 rem(20) 0;
-    padding: rem(16);
-    border-radius: rem(2);
+    border-radius: rem(1);
     background: #fff;
     opacity: 0.97;
     box-shadow: 0 0 rem(1) #efefef;
   }
-
-  .white-opacity-block .payment-section .trip-information-box {
+  .information-about-trip {
+    padding: rem(8) rem(16);
+    .trip-information-box {
+      padding: rem(8) 0;
+    }
+    .text {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: rem(16);
+    }
+  }
+  .payment-section {
     margin-top: rem(10);
-    padding-bottom: 0;
   }
 
   .panelcollapsed .panelcontent {
     display: none;
+  }
+
+  .TRIPSECTION {
+    padding-bottom: rem(16);
+    .col-md-12 {
+      padding-top: rem(16);
+    }
+    .col-md-6, .clearfix {
+      .small-title {
+        margin-top: rem(22);
+      }
+    }
+    .title {
+      font-family: StagSansLight, Arial, sans-serif;
+      margin-top: 0;
+      text-transform: uppercase;
+      font-size: rem(18);
+      line-height: rem(10);
+      margin-bottom: rem(2);
+    }
+
+    .small-title {
+      padding-bottom: rem(8);
+    }
+  }
+
+  .panelcontent {
+    .text {
+      font-size: rem(16);
+      margin: rem(8) 0 rem(16) 0;
+    }
+  }
+
+  .EXTRASECTION {
+    padding-bottom: rem(16);
+    .title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: StagSansLight, Arial, sans-serif;
+    }
+    .trip-information-box {
+      padding-top: rem(16);
+    }
+    .small-title {
+      padding-bottom: rem(12);
+    }
+  }
+
+  .PAYMENTSECTION {
+    margin-bottom: rem(16);
+    .payment-section {
+      padding: rem(0) rem(16) rem(8) rem(16);
+      margin-top: 0;
+    }
+    .small-text {
+      padding: rem(8) 0;
+    }
+    .trip-information-box {
+      padding: rem(8) 0;
+    }
+    .link-text {
+      color: #0098c3;
+    }
+    .divider {
+      padding: rem(4) 0;
+    }
+    .trip-information-box:not(:first-child) .small-text:first-child {
+      font-family: 'StagSansLight', Arial, sans-serif;
+      font-size: rem(18);
+      text-transform: uppercase;
+    }
+
+    .trip-information-box:not(:first-child) .text-medium:last-child {
+      font-family: 'StagSansLight', sans-serif;
+      font-size: rem(16);
+    }
+    .trip-information-box:nth-child(3) {
+      .small-text {
+        font-family: 'StagSansBook', sans-serif;
+        font-size: rem(16);
+      }
+      .text-medium {
+        padding-top: rem(16);
+      }
+    }
+
   }
 
   /*Main content*/
@@ -224,8 +313,8 @@ content {
   .container {
     margin-right: auto;
     margin-left: auto;
-    padding-left: rem(10);
-    padding-right: rem(10);
+    padding-left: rem(8);
+    padding-right: rem(8);
   }
 
   @media (min-width: rem(768)) {
@@ -249,6 +338,7 @@ content {
   .row {
     margin-left: rem(-15);
     margin-right: rem(-15);
+    padding: 0 rem(6);
   }
 
   .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {

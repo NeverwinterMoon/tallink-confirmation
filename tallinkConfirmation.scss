@@ -223,9 +223,14 @@ content {
   .TRIPSECTION {
     .col-md-12 { padding-top: rem(16); }
 
-    .clearfix .small-title {
-      margin-top: rem(22);
+
+    .clearfix{
+      padding-bottom: rem(16);
+      .small-title {
+        margin-top: rem(22);
+      }
     }
+
 
     .title {
       font-family: StagSansLight, Arial, sans-serif;

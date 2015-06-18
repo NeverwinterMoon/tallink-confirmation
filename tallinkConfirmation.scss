@@ -8,6 +8,8 @@ content {
     padding: 0;
   }
 
+  .top-bar .text { @extend .title3; }
+
   .main-wrapper {
     width: 100%;
     height: auto;
@@ -72,10 +74,6 @@ content {
 
   [confirmationHeader] {
     padding: rem(16) 0;
-  }
-
-  [confirmationBody] .clearfix {
-    padding-bottom: rem(16);
   }
 
   .white-opacity-block {
@@ -223,15 +221,12 @@ content {
   }
 
   .TRIPSECTION {
-    padding-bottom: rem(16);
-    .col-md-12 {
-      padding-top: rem(16);
+    .col-md-12 { padding-top: rem(16); }
+
+    .clearfix .small-title {
+      margin-top: rem(22);
     }
-    .col-md-6, .clearfix {
-      .small-title {
-        margin-top: rem(22);
-      }
-    }
+
     .title {
       font-family: StagSansLight, Arial, sans-serif;
       margin-top: 0;
@@ -241,9 +236,9 @@ content {
       margin-bottom: rem(2);
     }
 
-    .small-title {
-      padding-bottom: rem(8);
-    }
+    .small-title { padding-bottom: rem(8); }
+
+    .col-md-12:last-child { padding-bottom: rem(16); }
   }
 
   .panelcontent {
@@ -254,18 +249,17 @@ content {
   }
 
   .EXTRASECTION {
-    padding-bottom: rem(16);
     .title {
       margin-top: 0;
       margin-bottom: 0;
       font-family: StagSansLight, Arial, sans-serif;
     }
-    .trip-information-box {
-      padding-top: rem(16);
-    }
-    .small-title {
-      padding-bottom: rem(12);
-    }
+
+    .trip-information-box { padding-top: rem(16); }
+
+    .small-title { padding-bottom: rem(12); }
+
+    .col-md-12:last-child { padding-bottom: rem(16); }
   }
 
   .PAYMENTSECTION {
@@ -308,8 +302,6 @@ content {
 
   }
 
-  /*Main content*/
-  /*Responsive*/
   .container {
     margin-right: auto;
     margin-left: auto;
@@ -572,12 +564,16 @@ content {
     float: none !important;
   }
 
+  [animation='slide-up-down'] {
+    max-height: 100%;
+  }
+
   [animation='slide-up-down'].ng-hide-remove {
-    animation: slideDown 300ms both;
+    animation: slideDown 300ms ease both;
   }
 
   [animation='slide-up-down'].ng-hide {
-    animation: slideUp 300ms both;
+    animation: slideUp 200ms ease;
   }
 }
 
@@ -598,7 +594,6 @@ content {
 
   to {
     max-height: 0;
-    padding-bottom: 0;
     transform: translateY(-100%);
   }
 }

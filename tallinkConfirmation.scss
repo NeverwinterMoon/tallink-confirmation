@@ -85,7 +85,7 @@ content {
     opacity: 0.97;
     box-shadow: 0 0 rem(1) #efefef;
     cursor: pointer;
-    margin: rem(145) 0 0 0;
+    margin: rem(190) 0 0 0;
   }
 
   .white-opacity-block .heading {
@@ -223,9 +223,14 @@ content {
   .TRIPSECTION {
     .col-md-12 { padding-top: rem(16); }
 
-    .clearfix .small-title {
-      margin-top: rem(22);
+
+    .clearfix{
+      padding-bottom: rem(16);
+      .small-title {
+        margin-top: rem(22);
+      }
     }
+
 
     .title {
       font-family: StagSansLight, Arial, sans-serif;

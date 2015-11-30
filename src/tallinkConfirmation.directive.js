@@ -1,17 +1,18 @@
 'use strict';
 
-function confirmation($compile) {
+export default function confirmation($compile) {
   return {
     restrict:   'E'
     , scope:    {
       content: '='
     }
     , template: `<content></content>`
-    , link:     linkFunction
-  };
+  , link:     linkFunction
+};
 
   function linkFunction($scope, element) {
     $scope.$watch('content', function(newContent) {
+      debugger
       if (!newContent) return;
 
       var forEach = Array.prototype.forEach

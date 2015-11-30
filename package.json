@@ -5,5 +5,13 @@
     "NeverwinterMoon <pavel.sorokin@tallink.ee>"
   ],
   "description": "Directive for HTML Confirmation service.",
-  "main": "tallinkConfirmation.js"
+  "main": "dist/tallinkConfirmation.js",
+  "scripts": {
+    "compile": "babel src -d dist --presets es2015",
+    "prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18"
+  }
 }

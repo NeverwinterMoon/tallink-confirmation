@@ -5,8 +5,5 @@
     "NeverwinterMoon <pavel.sorokin@tallink.ee>"
   ],
   "description": "Directive for HTML Confirmation service.",
-  "main": [
-    "tallinkConfirmation.js",
-    "tallinkConfirmation.directive.js"
-  ]
+  "main": "tallinkConfirmation.js"
 }

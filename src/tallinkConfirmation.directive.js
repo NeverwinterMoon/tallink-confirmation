@@ -12,7 +12,6 @@ export default function confirmation($compile) {
 
   function linkFunction($scope, element) {
     $scope.$watch('content', function(newContent) {
-      debugger
       if (!newContent) return;
 
       var forEach = Array.prototype.forEach

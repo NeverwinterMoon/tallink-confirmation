@@ -1,15 +1,18 @@
 'use strict';
 
-export default class TallinkConfirmationDirective {
-  /*@ngInject*/
-  constructor($compile) {
-    this.restrict = 'E';
-    this.scope = { content: '=' };
-    this.template = '<content></content>';
-    this.$compile = $compile;
-  }
+export default function confirmation($compile) {
+  'ngInject';
 
-  linkFunction($scope, element) {
+  return {
+    restrict:   'E'
+    , scope:    {
+      content: '='
+    }
+    , template: '<content></content>'
+    , link:     linkFunction
+  };
+
+  function linkFunction($scope, element) {
     $scope.$watch('content', function(newContent) {
       if (!newContent) return;
 
@@ -21,7 +24,7 @@ export default class TallinkConfirmationDirective {
       updateHeader();
       updateBody();
 
-      this.$compile(contentEl.contents())($scope);
+      $compile(contentEl.contents())($scope);
 
       function updateHeader() {
         var counter = 0

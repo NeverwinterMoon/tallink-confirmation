@@ -1,16 +1,15 @@
 'use strict';
 
-export default function confirmation($compile) {
-  return {
-    restrict:   'E'
-    , scope:    {
-      content: '='
-    }
-    , template: `<content></content>`
-  , link:     linkFunction
-};
+export default class TallinkConfirmationDirective {
+  /*@ngInject*/
+  constructor($compile) {
+    this.restrict = 'E';
+    this.scope = { content: '=' };
+    this.template = '<content></content>';
+    this.$compile = $compile;
+  }
 
-  function linkFunction($scope, element) {
+  linkFunction($scope, element) {
     $scope.$watch('content', function(newContent) {
       if (!newContent) return;
 
@@ -22,7 +21,7 @@ export default function confirmation($compile) {
       updateHeader();
       updateBody();
 
-      $compile(contentEl.contents())($scope);
+      this.$compile(contentEl.contents())($scope);
 
       function updateHeader() {
         var counter = 0

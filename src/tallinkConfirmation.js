@@ -1,8 +1,8 @@
 'use strict';
 
 import { module } from 'angular';
-import confirmationDirective from './tallinkConfirmation.directive';
+import TallinkConfirmationDirective from './tallinkConfirmation.directive';
 
 export default module('tallink-confirmation', [])
-  .directive('confirmation', confirmationDirective)
+  .directive('confirmation', () => new TallinkConfirmationDirective)
 ;

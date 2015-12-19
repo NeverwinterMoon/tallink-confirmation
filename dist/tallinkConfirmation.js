@@ -12,4 +12,6 @@ var _tallinkConfirmation2 = _interopRequireDefault(_tallinkConfirmation);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = (0, _angular.module)('tallink-confirmation', []).directive('confirmation', _tallinkConfirmation2.default);
+exports.default = (0, _angular.module)('tallink-confirmation', []).directive('confirmation', function () {
+  return new _tallinkConfirmation2.default();
+});

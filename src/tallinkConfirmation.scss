@@ -74,6 +74,8 @@ content {
 
   [confirmationHeader] {
     padding: rem(16) 0;
+
+    .text { padding-right: rem(22); }
   }
 
   .white-opacity-block {
